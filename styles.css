@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #f4f6fb 0%, #eef3ff 100%);
+    margin: 0;
+    color: #1e2a4a;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+}
+
+.site-header {
+    background: linear-gradient(135deg, #23408e 0%, #5c7ded 100%);
+    color: white;
+    padding: 24px 24px 14px;
+}
+
+.brand-row {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-text h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.82rem;
+    margin: 0 0 8px;
+    opacity: 0.9;
+}
+
+.tagline {
+    margin: 0;
+    max-width: 760px;
+}
+
+.menu-toggle {
+    display: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.topnav {
+    max-width: 1100px;
+    margin: 18px auto 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.topnav a:hover {
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+.page-shell {
+    width: min(92%, 1100px);
+    margin: 28px auto 44px;
+}
+
+.hero-panel,
+.about-box {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.hero-panel {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 24px rgba(35, 64, 142, 0.08);
+}
+
+.hero-copy h2,
+.section-heading h2 {
+    margin-top: 0;
+    color: #23408e;
+}
+
+.hero-image-frame,
+.about-image-wrap {
+    background: #edf2ff;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+}
+
+.section-heading {
+    margin: 34px 0 18px;
+}
+
+.products-preview,
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card,
+.product-card,
+.about-box {
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(35, 64, 142, 0.08);
+}
+
+.card {
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    margin-bottom: 14px;
+    background: #f7f9ff;
+    padding: 12px;
+}
+
+.card h3,
+.product-card h3 {
+    color: #23408e;
+    margin-top: 0;
+}
+
+.product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.product-card {
+    padding: 20px;
+    border: 2px solid #d9e4ff;
+}
+
+.about-box {
+    padding: 24px;
+}
+
+.button-row {
+    margin: 28px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.button-row-left {
+    justify-content: flex-start;
+}
+
+.button {
+    background-color: #23408e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.button-secondary {
+    background-color: #6b7280;
+}
+
+@media screen and (max-width: 900px) {
+    .products-preview {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-panel,
+    .about-box,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .site-header {
+        padding: 18px 16px 12px;
+    }
+
+    .brand-row {
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .topnav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .topnav.show {
+        display: flex;
+    }
+
+    .topnav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .page-shell {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .hero-panel,
+    .about-box,
+    .card,
+    .product-card {
+        padding: 18px;
+    }
+
+    .products-preview,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-text h1 {
+        font-size: 1.65rem;
+    }
+
+    .button-row,
+    .button-row-left {
+        justify-content: center;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 0.97rem;
+    }
+
+    .hero-image-frame,
+    .about-image-wrap {
+        padding: 12px;
+    }
+
+    .site-header {
+        background: linear-gradient(180deg, #23408e 0%, #4665cf 100%);
+    }
+}

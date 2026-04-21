@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariyana Cellular - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="brand-row">
+        <div class="brand-text">
+            <p class="eyebrow">About the Company</p>
+            <h1>About Ariyana Cellular</h1>
+            <p class="tagline">This page now uses responsive text blocks and a flexible image that scales without breaking the layout.</p>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰ Menu</button>
+    </div>
+
+    <nav class="topnav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="page-shell">
+    <section class="about-box">
+        <div class="about-image-wrap">
+            <img
+                src="assets/store-640.jpg"
+                srcset="assets/store-320.jpg 320w, assets/store-640.jpg 640w, assets/store.jpeg 1200w"
+                sizes="(max-width: 700px) 88vw, 40vw"
+                alt="Store image"
+                class="responsive-image about-image"
+            >
+        </div>
+
+        <div class="about-copy">
+            <p>This website helps customers look at phones and learn about the company.</p>
+            <p>We sell phones from Apple, Samsung, Google, Motorola, and OnePlus.</p>
+            <p>The responsive update makes the page easier to view on a laptop, tablet, or phone without horizontal scrolling.</p>
+        </div>
+    </section>
+
+    <div class="button-row">
+        <a class="button" href="products.html">Back to Products</a>
+        <a class="button button-secondary" href="index.html">Home</a>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
